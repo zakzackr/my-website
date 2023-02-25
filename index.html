@@ -1,0 +1,396 @@
+<!-- 以降がHTMLで書かれていることを宣言します -->
+<!DOCTYPE html>
+
+<!-- 文書で主に使われる言語を指定します -->
+<!-- en　は英語という意味 -->
+<html lang="en">
+    
+<head>
+    <!-- 文字コードを指定します -->
+    <meta charset=“utf-8”> 
+
+    <!-- 世の中にある無数のデバイス、ブラウザに対して同じレイアウトでページを表示するための設定（覚える必要は全くありません） -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    
+
+    <!-- ブラウザのタブに表れるタイトル -->
+    <title>MyFirstWebpage</title> 
+    <style type="text/css">
+        :root {
+            --micro: 0.1rem;
+            --small: 0.5rem;
+            --medium: 2rem;
+            --big: 3rem;
+            --btn-width: 10rem;
+            --img-width: 20rem;
+            
+            --font-small: 0.7rem;
+            --font-smallmedium: 0.85rem;
+            --font-medium: 2rem;
+            --font-large: 3rem;
+            --font-massive: 4rem;
+            --font-exmassive:5.5rem;
+    
+            --font-bold: bold;
+            
+            --color-orange: orange;
+            --color-white: white;
+            --color-black: black;
+            --color-gray: #313131;
+            --color-lightgray: #838C95;
+            --color-whitesmoke: whitesmoke;
+            --color-green: cadetblue;
+            --color-hover: darkturquoise;
+            
+            color: floralwhite
+        } 
+        
+        
+        header {
+            background-color: black;
+            background-image: url("/Users/ryuichikozaki/Desktop/HTML:CSS projects/IMG_0029.JPG");
+            background-repeat: no-repeat;
+            background-image: cover;
+            background-position: center;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            list-style: none; 
+            font-size: var(--font-small);
+            font-weight: var(--font-bold);
+        }
+        
+        li {
+            padding: var(--small);
+            color: var(--color-white);
+            letter-spacing: var(--micro);
+        }
+        
+        li:hover {
+            color: var(--color-hover);
+        }
+        
+        h1 {
+            display: flex;
+            justify-content: center;
+            font-family: Georgia, serif;
+            color: var(--color-white);
+            font-size: var(--font-exmassive);
+            padding-top: 150px;
+            padding-left: 50px;
+            margin-bottom: 0;
+        }
+        
+        .job {
+            display: flex;
+            justify-content: center;
+            color: var(--color-white);
+            font-weight: lighter;
+            font-family: Georgia, serif;
+        }
+        
+        .fa {
+            color: var(--color-white);
+            font-size: 30px;
+            padding: 0.8rem;
+        }
+        
+        .fa:hover {
+            color: var(--color-hover);
+        }
+        
+        .logo {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .scroll {
+            width: 3rem;
+            height: 3rem;
+            background-color: var(--color-white);
+            border-radius: 50%;
+            margin-top: 15rem;
+            position: relative;
+            left: 48.55%;
+        }
+        
+        .scroll:hover {
+            background-color: var(--color-hover);
+        }
+
+        .second {
+            background-color: var(--color-gray);
+        }
+        
+        .me {
+            padding-top: 5rem;
+            text-align: center;
+        }
+        
+        .bold {
+            color: var(--color-white);
+            font-weight: var(--font-bold);
+            font-family: Arial, serif;
+            font-size: 1.35rem;
+        }
+        
+        .text {
+            color: var(--color-lightgray);
+            font-size: var(--font-smallmedium);
+        }
+        
+        .parent {
+            display: flex;  
+            justify-content: center;
+            padding-bottom: 5rem;
+        }
+        
+        .contact {
+            text-align: center;
+
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        
+        .btns {
+            padding-top: 2%;
+            padding-left: 15%;
+            
+        }
+        
+        
+        .btn {
+            background-color: var(--color-lightgray);
+            border: none;
+            padding: 0.25% 1%;
+            cursor: pointer;
+            color: var(--color-white);
+            font-size: 1rem;
+            border-radius: 1%;
+            width: 200%;
+        }
+        
+        .btn:hover {
+            background-color: var(--color-white);
+            color: var(--color-black);
+        }
+        
+        .btn:active {
+            color: var(--color-hover);
+        }
+        
+        .btn:visited{
+            color: var(--color-hover);
+        }
+        
+        
+        .third {
+            background-color: var(--color-white);
+            width: cover;
+            padding: 10rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .comingsoon {
+            color: var(--color-lightgray);
+            font-family: arial;
+        }
+        
+        .fourth {
+            background-color: var(--color-whitesmoke);
+            width: cover;
+            padding: 10rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .comingsoon2 {
+            color: var(--color-black);
+            font-family: arial;
+        }
+        
+        
+        
+        
+        
+        .inquiry {
+            background-color: var(--color-black);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        
+        .parallel {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+        
+
+        
+        .smallbold {
+            font-weight: bold;
+            padding-right: var(--big);
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+        
+        .fa-envelope {
+            padding-top: 5rem;
+            padding-bottom: 2rem;
+            font-size: var(--font-massive);
+        }
+        
+        .form {
+            padding-bottom: var(--big);
+        }
+        
+        .input {
+            background-color: var(--color-gray);
+            border: 0;
+            color: var(--color-white);
+            font-size: 15px;
+        }
+        
+        .input:focus {
+            background-color: var(--color-hover);
+            outline: 0px;
+        }
+        
+        .small .input {
+            padding: 3.5% 2.5%;
+        }
+        
+        textarea {
+            padding: 18px 18px;
+        }
+        
+        .submit {
+            background-color: var(--color-hover);
+            color: var(--color-white);
+            padding: 1rem;
+            border: none;
+        }
+        
+        .submit:hover {
+            background-color: var(--color-gray);
+        }
+        
+        
+        .push {
+            padding-top: var(--big);
+            padding-bottom: 4rem;
+        }
+        
+
+    </style>
+</head>
+    
+    
+<body>
+    <!-- body 要素にページに表示したい内容を書きます -->
+    <header>
+        <a id="home"></a>
+        <div>
+            <ul class="nav">
+                <a href="#home"><li>HOME</li></a>
+                <a href="#about"><li>ABOUT</li></a>
+                <a href="#resume"><li>RESUME</li></a>
+                <a href="#works"><li>WORKS</li></a>
+                <a href="#contact"><li>CONTACT</li></a>
+            </ul>
+        </div>
+        <h1>I'm Ryuichi.</h1>
+        <h3 class="job">Software Engineer</h3>
+        
+        <div class="logo">
+            <a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+            <a href="https://github.com/login"><i class="fa fa-github"></i></a>
+        </div>
+        
+        <div class="scroll"></div>
+        
+    </header>
+    
+    <div class="second">
+        <a id="about"></a>
+        <div class="me">
+            <h3 class="bold">About Me</h3>
+            <p class="text">I come from Japan. My interests are computer science and its applications.</p>
+            <p class="text">Outside of my work, I like travelling and working out.</p>
+        </div>
+        
+        
+        <div class="parent">
+            <div class="contact">
+                <h3 class="bold">Contact Details</h3>
+                <p class="text">Ryuichi</p>
+                <p class="text">090-1234-xxxx</p>
+                <p class="text">something@xxx.com</p>
+            </div>
+        
+            <div class="btns">
+                <a href="https://www.google.com/" target="_blank">
+                    <button class="btn">
+                        <h4>Resume/CV</h4>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="third">
+        <a id="resume"></a>
+        <p class="comingsoon">COMING SOON</p>
+    </div>
+    
+    
+    <div class="fourth">
+        <a id="works"></a>
+        <p class="comingsoon2">COMING SOON</p>
+    </div>
+    
+    <div class="inquiry">
+        <a id="contact"></a>
+        <i class="fa fa-envelope"></i>
+        <div class="parallel">
+            <div class="vertical">
+                <p class="smallbold">Name</p>
+                <p class="smallbold">Subject</p>
+                <p class="smallbold">Message</p>
+            </div>
+            
+            <div class="vertical">
+                <form class="small form">
+                    <input class="small input" type="text" name="username" placeholder="" size="80" maxlength="50">
+                </form>
+                
+                <form class="small form">
+                    <input class="small input" type="text" name="subject" placeholder="" size="80" maxlength="50">
+                </form>
+            
+                <textarea class="big input" type="text" name="message" placeholder="" rows="12" cols="73.7"></textarea>
+            </div>
+        </div>
+        
+        <form class="push">
+            <input class="submit smallbold" type="submit" value="Submit">
+        </form>
+    
+    </div>
+
+    
+</body>
+
+</html>
